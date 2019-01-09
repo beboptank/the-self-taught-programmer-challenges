@@ -3,13 +3,13 @@
 tvShows = ["The Walking Dead", "Entourage", "The Sopranos", "The Vampire Diaries"]
 
 for show in tvShows:
-    print(show)
+  print(show)
 
 
 #print all the numbers from 25 to 50
 
 for i in range(25, 51):
-    print(i)
+  print(i)
 
 
 #print each item from the first challenge and their indexes
@@ -19,8 +19,8 @@ tvShows = ["The Walking Dead", "Entourage", "The Sopranos", "The Vampire Diaries
 i = 0
 
 for show in tvShows:
-    print(show, i)
-    i += 1
+	print(show)
+	i += 1
 
 
 #write a program with an infinite loop (with the option to type q to quit) and a list of numbers.
@@ -28,6 +28,19 @@ for show in tvShows:
 #they guessed correctly
 
 numberList = [5, 7, 12, 15, 18, 20]
+
+while True:
+	userInput = input("Enter q to quit or guess a number: ")
+	if userInput == 'q':
+		break
+	try:
+		userInput = int(userInput)
+	except ValueError:
+		print("Enter a valid number or q to quit the program.")
+	if userInput in numberList:
+		print("Great guess!")
+	else:
+		print("That's wrong!")
 
 #Still working on this problem!
 
@@ -41,8 +54,8 @@ list2 = [9, 1, 33, 83]
 list3 = []
 
 for i in list1:
-    for j in list2:
-        list3.append(i * j)
+  for j in list2:
+  	list3.append(i * j)
 
 print(list3)
 
